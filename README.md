@@ -23,3 +23,30 @@ FORMAT USED: (Moore’s vision template)
 - THAT (key benefit, compelling reason to buy)
 - UNLIKE (primary competitive alternative)
 - OUR PRODUCT (statement of primary differentiation
+
+## Personas
+
+Persona one:  Sam Cill
+
+-Age: 45
+-Occupation: Business man 
+-Currently needs: since Sam is a busy man, he doesn’t have time to search for multiple restaurants to choose a booking 
+-What the restaurant reservation system does for them: the reservation system allows Sam to search for different restaurants from one central website. Saving him time and effort.
+
+Persona two:  Sheila Shoon, Housewife (children two)
+-Age: 45
+-Occupation: Housewife 
+-Currently needs: this household books for multiple people every week at least one time making them a frequent outside eater. They want the system to apply corresponding promotions and coupons with applicable. 
+-What the restaurant reservation system does for them: the system automatically applies coupons and discounts when they book for the reservation so when they arrive at the restaurant they will get a discount. 
+
+Persona three: Mike Loop
+-Age: 30
+-Occupation: Restaurant Manager 
+-Currently needs: A way to manage incoming restaurant reservations in a fast and effective way with a easy to use user interface for optimal use
+-What the restaurant reservation system does for them:  the system allows this user to manage the current reservations by allowing them to update, or cancel (remove) the current reservations that have been made in the system.
+
+## Scenarios and user stories:
+
+
+
+
