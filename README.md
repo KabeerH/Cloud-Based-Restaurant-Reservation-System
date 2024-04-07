@@ -59,4 +59,12 @@ Persona three: Mike Loop
 - Scenario: When Mike arrives to work, his staff complains of not having an automatic system in place to manage incoming reservations, and to edit user information. Incoming reservations sometimes get messed up due to this system not being in place.
 - User Story: As Mike a restaurant manager, I want incoming reservations to be managed by a system so it lighten’s the staff workload
 
+## System Architecture Diagram w 
 
+# PHR System Documentation
+
+## Overview of Application
+
+This application is a system that uses the built-in package `http.server`  to handle HTTP requests that allow the user to create, recieve, update and delete requests. For data storage I am using a MySQL database that is implemented inside my code where if the database is not presented then make one databasse and the associated tables (One for user's and one for reservations) - Backend. For the frontend I have used next.js to provide a responsive user interface that using the methods from my backend (server.py) to securely add, create, update and delete actions.
+
+## Tools and Technology Used
