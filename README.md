@@ -47,6 +47,16 @@ Persona three: Mike Loop
 
 ## Scenarios and user stories:
 
+- `Name`: Sam Cill
+- Scenario: While at work Sam realises that he forgot to book for a reservation at a restaurant. He doesn’t have time to go to multiple restaurant websites to see which one is optimal. 
+- User Story: As Sam a busy business man, I want to search for different restaurants from one place so I can save time and effort
 
+- `Name`: Sheila Shoon
+- Scenario: It’s Thursday morning and Sheila plans to go to a restaurant with her two kids tomorrow but wants to get the best deals for her order, she wants all available coupons to be applied to her reservation so when she goes they are ready. 
+- User Story: As Sheila A housewife, I want to have available coupons applied to my reservation so when I go to the restaurant those coupons automatically apply to my checkout.
+
+- `Name`: Mike Loop
+- Scenario: When Mike arrives to work, his staff complains of not having an automatic system in place to manage incoming reservations, and to edit user information. Incoming reservations sometimes get messed up due to this system not being in place.
+- User Story: As Mike a restaurant manager, I want incoming reservations to be managed by a system so it lighten’s the staff workload
 
 
