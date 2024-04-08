@@ -61,6 +61,9 @@ Persona three: Mike Loop
 
 ## System Architecture Diagram 
 
+![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/db3e36cd-ab62-4ded-b1ea-e5d37f8eb712)
+
+
 # PHR System Documentation
 
 ## Overview of Application
@@ -192,5 +195,11 @@ This endpoint deletes a reservation from the database.
 
 - Password Hashing: Whenever a new user is added to the system, their data is hashed using the bcrypt python library and salting the password before storing the data into the SQlite database, if someone gets access to the users table then the data won’t show their password but instead hashed values.
 
+  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/c3c84300-c0d4-4849-8872-2bbb9d2f1f1d)
 
+- Access Control: The reservations are associated with the user_id, the system will check which user_id is trying to access what data and only return the data associated with that user ensuring data security.
+
+  ## Contributors 
+
+- Kabeer Harjani | https://github.com/KabeerH
 
