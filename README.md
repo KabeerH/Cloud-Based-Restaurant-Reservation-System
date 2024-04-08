@@ -61,7 +61,8 @@ Persona three: Mike Loop
 
 ## System Architecture Diagram 
 
-![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/db3e36cd-ab62-4ded-b1ea-e5d37f8eb712)
+![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/bb93063e-fa62-4056-94cd-c5418f1099e3)
+
 
 
 # PHR System Documentation
