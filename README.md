@@ -74,3 +74,123 @@ This application is a system that uses the built-in package `http.server`  to ha
 - Containerization: Docker
 - Online deployment: 
 - API Testing: Postman
+
+## Getting Started (local run)
+
+1. Clone the repository using the command in cmd
+```bash
+git clone https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System
+```
+2. Change to the directory where you have cloned the project
+```bash
+cd directory
+```
+4. Naviagate to the ./backend and create a .env file import the following line:
+```bash
+DB_NAME = 'reservation_db'
+```
+5. To build the project using docker
+```bash 
+docker-compose up --build
+```
+6. To start the project if not started
+```bash 
+docker-compose up 
+```
+7. To Stop the application and delete the container
+```bash
+docker-compose down
+```
+
+Once the application is started, you can go to http://localhost:3000 to access the frontend application and http://localhost:8000 to access api calls
+
+## METHODS Functions (POSTMAN)
+
+Before accessing the system you have to: 
+
+- `Register`: To start using the Restaurant Reservation system you must register for an account. To do this send a POST request to the /register endpoint or go to http://localhost:3000/register after starting the application. Register with a “username”, “password”, and "email" field. Example below: 
+
+  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/1d81f6c1-382e-4a65-9dd9-5180e3434f24)
+
+- `Log In`:  After you have registered for an account then you can login by first sending a POST request to the /login endpoint or go to  http://localhost:3000/login after starting the application. Login with the "username" and "password". The credentials you registered with. The response should give you a "jwt token" in response. Input the token value into "Auth -> Bearer Token -> set token value". Example below:
+
+  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/242b7315-3ad0-4918-bf33-acce235e8f1b)
+  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/607ec6c8-b868-4081-98e6-67f34f5512ee)
+
+
+Now you should be able to access the following endpoints. If the Bearer Token value is incorrect then you should be returned with "Invaild token" response.
+
+### GET (ALL) /reservations
+
+This endpoint retrieves all reservations from the database.
+
+- Method: `GET`
+- URL: `/reservations`
+
+**Usage with Postman:**
+1. Set the HTTP method to `GET`.
+2. Enter the request URL as `http://localhost:8000/reservations`.
+3. Click on `Send` to make the request.
+
+![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/b20a61c2-3f2f-4275-9967-94766dc95748)
+
+
+### POST /reservations
+
+This endpoint creates a new reservation in the database.
+
+- Method: `POST`
+- URL: `/reservations`
+- Request Body: A JSON object containing 'date', 'time' and 'party_size'
+  
+**Usage with Postman:**
+1. Set the HTTP method to `POST`.
+2. Enter the request URL as `http://localhost:8000/reservations`.
+3. Click on `Body`, then select `raw` and `JSON`.
+4. In the text field, enter your reservation in the format: 'date', 'time', 'party_size'
+5. Click on `Send` to make the request.
+
+![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/76768bc4-a247-4fe3-bb3f-0acdd13c8d1e)
+
+### PUT /reservations/:id
+
+This endpoint updates an existing reservation in the database.
+
+- Method: `PUT`
+- URL: `/reservations`
+- Request Body: A JSON object containing 'date', 'time', 'party_size'
+
+**Usage with Postman:**
+1. Set the HTTP method to `PUT`.
+2. Enter the request URL as `http://localhost:8000/reservations/:id`.
+3. Click on `Body`, then select `raw` and `JSON`.
+4. In the text field, enter your reservation in the following format: 'date', 'time', 'party_size'
+5. Click on `Send` to make the request.
+
+![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/13f74791-6aca-44ea-a778-74bac8bf6d82)
+
+### DELETE /reservations/:id
+
+This endpoint deletes a reservation from the database.
+
+- Method: `DELETE`
+- URL: `/reservations/:id`
+
+**Usage with Postman:**
+1. Set the HTTP method to `DELETE`.
+2. Enter the request URL as `http://localhost:8000/reservations/:id`.
+3. change reservation id with the id you trying to delete
+4. Click on `Send` to make the request
+
+![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/cfafbc83-c32b-43af-aca4-f01fdc00ddbe)
+
+## Security precautions made: 
+
+- User Authentication: Using JWT Token Authentication the system first verifies the identity of the user. When making any request to the system it checks the user’s credentials against the users table in the reservation_db database. This JWT token value will be random everytime to ensure timeout if the user is logged in for too long (inactive).  If the user credentials also don't match then display a error message
+
+  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/cd35f2f4-05fe-4810-860a-1cf4996b5b55)
+
+- Password Hashing: Whenever a new user is added to the system, their data is hashed using the bcrypt python library and salting the password before storing the data into the SQlite database, if someone gets access to the users table then the data won’t show their password but instead hashed values.
+
+
+
