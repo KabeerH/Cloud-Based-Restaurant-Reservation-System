@@ -65,7 +65,7 @@ Persona three: Mike Loop
 
 
 
-# PHR System Documentation
+# Restaurant Reservation System Documentation
 
 ## Overview of Application
 
@@ -73,7 +73,7 @@ This application is a system that uses the built-in package `http.server`  to ha
 
 ## Tools and Technology Used
 - Programming Language(s): Python for backend, javascript (next.js) for frontend 
-- Database: MySQL
+- Database: SQLite
 - Version Control: Git 
 - Containerization: Docker
 - API Testing: Postman
