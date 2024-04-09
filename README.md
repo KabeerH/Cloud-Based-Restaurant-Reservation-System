@@ -76,7 +76,6 @@ This application is a system that uses the built-in package `http.server`  to ha
 - Database: MySQL
 - Version Control: Git 
 - Containerization: Docker
-- Online deployment: 
 - API Testing: Postman
 
 ## Getting Started (local run)
